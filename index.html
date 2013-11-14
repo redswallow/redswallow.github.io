@@ -1,0 +1,94 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Notes, ">
+
+
+        <title>Notes </title>
+
+    <link rel="stylesheet" href="http://yui.yahooapis.com/pure/0.3.0/pure-min.css">
+    <link rel="stylesheet" href="/theme/css/pure.css">
+
+    <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
+</head>
+
+<body>
+<div class="pure-g-r" id="layout">
+<div class="sidebar pure-u">
+    <div class="cover-img" style="background-image: url('/theme/images/bg.jpg')">
+        <div class="cover-body">
+            <header class="header">
+                <hgroup>
+                    <h1 class="brand-main"><a href="/">Notes</a></h1>
+                    <p class="tagline"></p>
+                </hgroup>
+            </header>
+        </div>
+    </div>
+</div>    <div class="pure-u-1">
+        <div class="content">
+            <!-- A wrapper for all the blog posts -->
+            <div class="posts">
+                <h1 class="content-subhead">
+                            Latest posts
+                </h1>
+<section class="post">
+    <header class="post-header">
+        <h3><a class="post-title" href="/2013/10/neural-network-and-data-compression">神经网络与数据压缩</a></h3>
+            <p class="post-time">Sat 19 October 2013</p>
+            <p class="post-meta"><p>神经网络除了用于Regreesion和Classification，还可以与用于数据压缩Data Compression。自联想神经网络Auto-Associative Neural Network是三层BP网络，它的特点是输出是对输入的一种重构，即输出等于输入或者允许输入输出有一定的误差存在。如果中间层Hidden Layer节点少于输入层Input Layer，中间层可以用更少节点表示输入层的数据同时可以在输出层重构出输入层数据，这就是数据压缩和解压的过程。</p>
+<p>从另一个角度来看，中间层提取出数据中最重要的特征，用更少维度表示输入数据。如果我们在网络中不使用sigmoid函数，而使用线性函数，这就是主成分分析PCA模型。</p>
+<p>在深度学习中，上述结构被称作自编码神经网络Autoencoder Neural Network。</p></p>
+            <footer>
+            <p class="post-meta">
+                Posted in <a href="/category/notes.html">notes</a>
+            </p>
+        </footer>
+    </header>
+</section><div class="pagination-wrapper content-subhead">
+    <div class="pagination">
+        <div class="pagination-left">
+                &nbsp;
+        </div>
+        <span>Page 1 / 1</span>
+        <div class="pagination-right">
+        </div>
+    </div>
+</div><footer class="footer">
+    <p>&copy; Notes &ndash;
+        Built with <a href="https://github.com/danclaudiupop/pure">Pure Theme</a>
+        for <a href="http://blog.getpelican.com/">Pelican</a>
+    </p>
+    <p>Licensed under <a rel="license" href="http://creativecommons.org/licenses/by-sa/3.0/deed.en_GB">Creative Commons Attribution-ShareAlike 3.0 Unported License</a></p>
+</footer>            </div>
+        </div>
+    </div>
+</div>
+    <script>
+        var $top = $('.go-top');
+
+        // Show or hide the sticky footer button
+        $(window).scroll(function() {
+            if ($(this).scrollTop() > 200) {
+                $top.fadeIn(200);
+            } else {
+                $top.fadeOut(200);
+            }
+        });
+
+        // Animate the scroll to top
+        $top.click(function(event) {
+            event.preventDefault();
+            $('html, body').animate({scrollTop: 0}, 300);
+        })
+
+        // Makes sure that the href="#" attached to the <a> elements
+        // don't scroll you back up the page.
+        $('body').on('click', 'a[href="#"]', function(event) {
+            event.preventDefault();
+        });
+    </script>
+</body>
+</html>
