@@ -5,6 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="description" content="Notes, ">
 
+        <link rel="alternate"  href="/feeds/all.atom.xml" type="application/atom+xml" title="Notes Full Atom Feed"/>
 
         <title>Notes </title>
 
@@ -41,6 +42,18 @@
             <p class="post-meta"><p>神经网络除了用于Regreesion和Classification，还可以与用于数据压缩Data Compression。自联想神经网络Auto-Associative Neural Network是三层BP网络，它的特点是输出是对输入的一种重构，即输出等于输入或者允许输入输出有一定的误差存在。如果中间层Hidden Layer节点少于输入层Input Layer，中间层可以用更少节点表示输入层的数据同时可以在输出层重构出输入层数据，这就是数据压缩和解压的过程。</p>
 <p>从另一个角度来看，中间层提取出数据中最重要的特征，用更少维度表示输入数据。如果我们在网络中不使用sigmoid函数，而使用线性函数，这就是主成分分析PCA模型。</p>
 <p>在深度学习中，上述结构被称作自编码神经网络Autoencoder Neural Network。</p></p>
+            <footer>
+            <p class="post-meta">
+                Posted in <a href="/category/notes.html">notes</a>
+            </p>
+        </footer>
+    </header>
+</section><section class="post">
+    <header class="post-header">
+        <h3><a class="post-title" href="/2013/06/what-is-compressed-sensing">压缩感知</a></h3>
+            <p class="post-time">Thu 27 June 2013</p>
+            <p class="post-meta"><p>压缩感知问题源自稀疏表示问题，两者的本质都是要在一定的约束条件下求得欠定方程的最稀疏解。Donoho在这个领域功不可没，也是压缩感知研究领域具有奠基性工作的人物。压缩感知的发现是个传说，2004年加州理工学院教授（现在在斯坦福）的Emmanuel Candes，Donoho的学生，在研究Shepp-Logan Phantom图像，这是医学图像处理领域用来进行仿真测试的标准模拟图像。Candes检查的图像质量非常差，充满了噪声，他想到一种名叫L1-minimization的数学算法能去除掉噪声条纹，结果算法真的起作用了，而且他发现在图像变干净的同时，图像的细节出人意料得完美，简直就像变魔术一样。</p>
+<p>Emmanuel Candes后来向加州大学洛杉矶分校的同事陶哲轩介绍了自己的发现，陶哲轩是世界上搞调和分析的顶尖高手之一，于是陶哲轩、Emmanuel Candes和Donoho神牛们完善了理论，联手挖出了Compressed Sensing的大坑。</p></p>
             <footer>
             <p class="post-meta">
                 Posted in <a href="/category/notes.html">notes</a>
