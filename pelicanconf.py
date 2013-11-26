@@ -3,6 +3,9 @@
 from __future__ import unicode_literals
 
 AUTHOR = u'redswallow'
+AUTHOR_SAVE_AS = False
+AUTHORS_SAVE_AS = False
+
 SITENAME = u'Notes'
 SITEURL = ''
 
