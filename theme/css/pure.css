@@ -5,9 +5,7 @@
 }
 
 h1, h2, h3, h4, h5, h6, p{
-    font-size: 100%;
     font-weight: normal;
-    margin:0;
     padding:0;
 }
 
@@ -157,7 +155,6 @@ pre {
 
 .content {
     padding: 2em 3em 0;
-    font-size: 110%;
     line-height: 1.45;
     color: #333332;
 }
