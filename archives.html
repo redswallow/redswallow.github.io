@@ -13,6 +13,22 @@
     <link rel="stylesheet" href="/theme/css/pure.css">
 
     <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
+    <!-- latex -->
+    <script src='http://cdn.mathjax.org/mathjax/latest/MathJax.js' type='text/javascript'>    
+        MathJax.Hub.Config({
+        HTML: ["input/TeX","output/HTML-CSS"],
+        TeX: { extensions: ["AMSmath.js","AMSsymbols.js"], equationNumbers: { autoNumber: "AMS" } },
+        extensions: ["tex2jax.js"],
+        jax: ["input/TeX","output/HTML-CSS"],
+        tex2jax: { 
+            inlineMath: [ ['$','$'], ["\\(","\\)"] ],
+            displayMath: [ ['$$','$$'], ["\\[","\\]"] ],
+            processEscapes: true },
+        "HTML-CSS": {
+            styles: { ".MathJax .mo, .MathJax .mi": {color: "black ! important"}}
+        }
+        });
+    </script>    
 </head>
 
 <body>
@@ -31,6 +47,14 @@
 </div>    <div class="pure-u-1">
         <div class="content">
             <h1 class="content-subhead">All posts</h1>
+                <div class="pure-u-1 arhive-item">
+                    <div class="pure-u-1-6">
+                        <h4 class="arhive-date">20 December 2013</h4>
+                    </div>
+                    <div class="pure-u-1-2">
+                        <a href="2013/12/ecc-and-dual-ec-drbg">椭圆曲线和Dual_EC_DRBG后门</a>
+                    </div>
+                </div>
                 <div class="pure-u-1 arhive-item">
                     <div class="pure-u-1-6">
                         <h4 class="arhive-date">19 October 2013</h4>

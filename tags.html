@@ -13,13 +13,35 @@
     <link rel="stylesheet" href="/theme/css/pure.css">
 
     <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
+    <!-- latex -->
+    <script src='http://cdn.mathjax.org/mathjax/latest/MathJax.js' type='text/javascript'>    
+        MathJax.Hub.Config({
+        HTML: ["input/TeX","output/HTML-CSS"],
+        TeX: { extensions: ["AMSmath.js","AMSsymbols.js"], equationNumbers: { autoNumber: "AMS" } },
+        extensions: ["tex2jax.js"],
+        jax: ["input/TeX","output/HTML-CSS"],
+        tex2jax: { 
+            inlineMath: [ ['$','$'], ["\\(","\\)"] ],
+            displayMath: [ ['$$','$$'], ["\\[","\\]"] ],
+            processEscapes: true },
+        "HTML-CSS": {
+            styles: { ".MathJax .mo, .MathJax .mi": {color: "black ! important"}}
+        }
+        });
+    </script>    
 </head>
 
 <body>
-    <h1>Tags for Notes</h1>        <li><a href="/tag/compressed-sensing.html">compressed sensing</a> (1)</li>
+    <h1>Tags for Notes</h1>        <li><a href="/tag/bi-te-bi.html">比特币</a> (1)</li>
+        <li><a href="/tag/compressed-sensing.html">compressed sensing</a> (1)</li>
+        <li><a href="/tag/dual_ec_drbg.html">Dual_EC_DRBG</a> (1)</li>
+        <li><a href="/tag/ecc.html">ECC</a> (1)</li>
+        <li><a href="/tag/mi-ma-xue.html">密码学</a> (1)</li>
+        <li><a href="/tag/nsa.html">NSA</a> (1)</li>
         <li><a href="/tag/pca.html">PCA</a> (1)</li>
         <li><a href="/tag/shen-jing-wang-luo.html">神经网络</a> (1)</li>
         <li><a href="/tag/shu-ju-ya-suo.html">数据压缩</a> (2)</li>
+        <li><a href="/tag/tuo-yuan-qu-xian.html">椭圆曲线</a> (1)</li>
     <script>
         var $top = $('.go-top');
 

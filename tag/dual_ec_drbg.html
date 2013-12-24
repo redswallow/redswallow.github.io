@@ -7,7 +7,7 @@
 
         <link rel="alternate"  href="/feeds/all.atom.xml" type="application/atom+xml" title="Notes Full Atom Feed"/>
 
-        <title>神经网络 tag // Notes </title>
+        <title>Dual_EC_DRBG tag // Notes </title>
 
     <link rel="stylesheet" href="http://yui.yahooapis.com/pure/0.3.0/pure-min.css">
     <link rel="stylesheet" href="/theme/css/pure.css">
@@ -49,14 +49,17 @@
             <!-- A wrapper for all the blog posts -->
             <div class="posts">
                 <h1 class="content-subhead">
-Posts tagged '神经网络'                </h1>
+Posts tagged 'Dual_EC_DRBG'                </h1>
 <section class="post">
     <header class="post-header">
-        <h3><a class="post-title" href="/2013/10/neural-network-and-data-compression">神经网络与数据压缩</a></h3>
-            <p class="post-time">Sat 19 October 2013</p>
-            <p class="post-meta"><p>神经网络除了用于Regreesion和Classification，还可以与用于数据压缩Data Compression。自联想神经网络Auto-Associative Neural Network是三层BP网络，它的特点是输出是对输入的一种重构，即输出等于输入或者允许输入输出有一定的误差存在。如果中间层Hidden Layer节点少于输入层Input Layer，中间层可以用更少节点表示输入层的数据同时可以在输出层重构出输入层数据，这就是数据压缩和解压的过程。</p>
-<p>从另一个角度来看，中间层提取出数据中最重要的特征，用更少维度表示输入数据。如果我们在网络中不使用sigmoid函数，而使用线性函数，这就是主成分分析PCA模型。</p>
-<p>在深度学习中，上述结构被称作自编码神经网络Autoencoder Neural Network。</p></p>
+        <h3><a class="post-title" href="/2013/12/ecc-and-dual-ec-drbg">椭圆曲线和Dual_EC_DRBG后门</a></h3>
+            <p class="post-time">Fri 20 December 2013</p>
+            <p class="post-meta"><p>这两天爆出NSA收买RSA将NSA推荐的算法，Dual_EC_DRBG，设置为BSafe中默认的随机数生成算法。为了推广这种算法，其实早在2007年NSA就执意将其写入了NIST（美国国家标准技术管理委员会）的确定性随机数生成器推荐标准（Special Publication 800-90，SP800-90），即使它速度极慢。同年Dual_EC_DRBG就在Crypto 2007会议上被指出存在被植入后门的可能，但不能认定算法设计者是否知道后门的参数，也不能认定NIST有意在算法中植入后门。2013年9月Edward Snowden泄漏的内部备忘录显示NSA曾向某加密算法植入后门，再到12月路透社爆出RSA被收买，现在看起来是NSA精心选取参数值下后门。有意思的是，比特币也使用了ECC来生成随机数，但是比特币神秘创始人中本聪在2009年发明比特币的时采用了小众的secp256k1的曲线参数而不是有问题的secp256r1（NIST P-256），神奇地躲过了密码学子弹。</p>
+<p>那么Dual_EC_DRBG漏洞在哪，为什么随机数生成器的漏洞会让加密算法被攻破？先要从椭圆曲线和随机数生成器说起。</p>
+<h1>椭圆曲线</h1>
+<p>椭圆曲线密码学（Elliptic curve cryptography，ECC）由Koblitz和Miller分别独立提出，是迄今为止安全性最高的一种公钥密码算法。椭圆曲线E的形式是：</p>
+<p>$$y^2=x^3+ax+b, a,b \in F_p$$</p>
+<p>有限域Fq，q一般是2的m次方或大素数p ...</p></p>
             <footer>
             <p class="post-meta">
                 Posted in <a href="/category/notes.html">notes</a>
