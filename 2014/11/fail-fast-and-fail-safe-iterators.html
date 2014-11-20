@@ -7,7 +7,7 @@
 
         <link rel="alternate"  href="/feeds/all.atom.xml" type="application/atom+xml" title="Notes Full Atom Feed"/>
 
-        <title>all posts // Notes </title>
+        <title>fail-fast 和 fail-safe 机制 | Notes </title>
 
     <link rel="stylesheet" href="http://yui.yahooapis.com/pure/0.3.0/pure-min.css">
     <link rel="stylesheet" href="/theme/css/pure.css">
@@ -46,65 +46,46 @@
     </div>
 </div>    <div class="pure-u-1">
         <div class="content">
-            <h1 class="content-subhead">All posts</h1>
-                <div class="pure-u-1 arhive-item">
-                    <div class="pure-u-1-6">
-                        <h4 class="arhive-date">19 November 2014</h4>
-                    </div>
-                    <div class="pure-u-1-2">
-                        <a href="2014/11/fail-fast-and-fail-safe-iterators">fail-fast 和 fail-safe 机制</a>
-                    </div>
+            <section class="post">
+                <header class="post-header">
+                    <h3><p class="post-title">fail-fast 和 fail-safe 机制</p></h3>
+                    <p class="post-time">Wed 19 November 2014</p>
+                        <p>
+                                <a class="post-category" href="/tag/java.html">Java</a>
+                        </p>
+                </header>
+            </section>
+            <p>fail-fast 机制是 Java 集合 (Collection) 中的一种是一种错误检测机制，JDK 并不保证 fail-fast 机制一定会发生。如果在迭代器迭代的过程中会检查对集合的结构进行任何的修改，每次获得下一个元素时，如果发现有任何修改，会立刻抛出异常 ConcurrentModificationException，而不是等遍历完了再抛出异常。所有迭代器的实现都是快速失败的设计。</p>
+<p>快速失败 fail-fast 和故障安全 fail-safe 之间的不同是什么？</p>
+<p>迭代器故障安全 fail-safe 以克隆方式工作，因此它不会影响集合中的任何修改。所有 java.util 包中的集合类都是 fail-fast，而 java.util.concurrent 中的类比如 CopyOnWriteArrayList 都是 fail-safe。</p>
+<p><code>Contrary to fail-fast Iterator, fail-safe iterator doesn't throw any Exception if Collection is modified structurally
+while one thread is Iterating over it because they work on clone of Collection instead of original collection and that’s why they are called as fail-safe iterator. Iterator of CopyOnWriteArrayList is an example of fail-safe Iterator also iterator written by ConcurrentHashMap keySet is also fail-safe iterator.</code></p>
+            <div class="hr"></div>
+            <a href="#" class="go-top">Go Top</a>
+                <div class="comments">
+                    <div id="disqus_thread"></div>
+                    <script type="text/javascript">
+                        var disqus_identifier = "2014/11/fail-fast-and-fail-safe-iterators";
+                        (function() {
+                            var dsq = document.createElement('script');
+                            dsq.type = 'text/javascript';
+                            dsq.async = true;
+                            dsq.src = 'http://redswallowgithubio.disqus.com.disqus.com/embed.js';
+                            (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+                        })();
+                    </script>
+                    <noscript>Please enable JavaScript to view <a href="http://disqus.com/?ref_noscript">comments</a>.</noscript>
                 </div>
-                <div class="pure-u-1 arhive-item">
-                    <div class="pure-u-1-6">
-                        <h4 class="arhive-date">26 April 2014</h4>
-                    </div>
-                    <div class="pure-u-1-2">
-                        <a href="2014/04/convolutional-neural-networks">卷积神经网络</a>
-                    </div>
-                </div>
-                <div class="pure-u-1 arhive-item">
-                    <div class="pure-u-1-6">
-                        <h4 class="arhive-date">04 January 2014</h4>
-                    </div>
-                    <div class="pure-u-1-2">
-                        <a href="2014/01/2014-online-courses">2014年公开课计划</a>
-                    </div>
-                </div>
-                <div class="pure-u-1 arhive-item">
-                    <div class="pure-u-1-6">
-                        <h4 class="arhive-date">20 December 2013</h4>
-                    </div>
-                    <div class="pure-u-1-2">
-                        <a href="2013/12/ecc-and-dual-ec-drbg">椭圆曲线和Dual_EC_DRBG后门</a>
-                    </div>
-                </div>
-                <div class="pure-u-1 arhive-item">
-                    <div class="pure-u-1-6">
-                        <h4 class="arhive-date">19 October 2013</h4>
-                    </div>
-                    <div class="pure-u-1-2">
-                        <a href="2013/10/neural-network-and-data-compression">神经网络与数据压缩</a>
-                    </div>
-                </div>
-                <div class="pure-u-1 arhive-item">
-                    <div class="pure-u-1-6">
-                        <h4 class="arhive-date">27 June 2013</h4>
-                    </div>
-                    <div class="pure-u-1-2">
-                        <a href="2013/06/what-is-compressed-sensing">压缩感知</a>
-                    </div>
-                </div>
-        </div>
-    </div>
-</div>
 <footer class="footer">
     <p>&copy; Notes &ndash;
         Built with <a href="https://github.com/danclaudiupop/pure">Pure Theme</a>
         for <a href="http://blog.getpelican.com/">Pelican</a>
     </p>
     <p>Licensed under <a rel="license" href="http://creativecommons.org/licenses/by-sa/3.0/deed.en_GB">Creative Commons Attribution-ShareAlike 3.0 Unported License</a></p>
-</footer>    <script>
+</footer>        </div>
+    </div>
+</div>
+    <script>
         var $top = $('.go-top');
 
         // Show or hide the sticky footer button
