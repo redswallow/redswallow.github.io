@@ -11,13 +11,3 @@ fail-fast 机制是 Java 集合 (Collection) 中的一种是一种错误检测�
 
 `Contrary to fail-fast Iterator, fail-safe iterator doesn't throw any Exception if Collection is modified structurally
 while one thread is Iterating over it because they work on clone of Collection instead of original collection and that’s why they are called as fail-safe iterator. Iterator of CopyOnWriteArrayList is an example of fail-safe Iterator also iterator written by ConcurrentHashMap keySet is also fail-safe iterator.`
-
-90 100 102 105 110 145 150 198 190 200
-1  2   3   4   5   6   7   8   9   10
-
-2 2,10
-3 5,9
-4 4,6
-1 1,7
-5 3,8
-
