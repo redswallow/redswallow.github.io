@@ -1,5 +1,22 @@
 <?xml version="1.0" encoding="utf-8"?>
-<feed xmlns="http://www.w3.org/2005/Atom"><title>Notes</title><link href="/" rel="alternate"></link><link href="/feeds/all.atom.xml" rel="self"></link><id>/</id><updated>2014-11-19T00:00:00-08:00</updated><entry><title>fail-fast 和 fail-safe 机制</title><link href="/2014/11/fail-fast-and-fail-safe-iterators" rel="alternate"></link><updated>2014-11-19T00:00:00-08:00</updated><author><name>redswallow</name></author><id>tag:,2014-11-19:2014/11/fail-fast-and-fail-safe-iterators</id><summary type="html">&lt;p&gt;fail-fast 机制是 Java 集合 (Collection) 中的一种是一种错误检测机制，JDK 并不保证 fail-fast 机制一定会发生。如果在迭代器迭代的过程中会检查对集合的结构进行任何的修改，每次获得下一个元素时，如果发现有任何修改，会立刻抛出异常 ConcurrentModificationException，而不是等遍历完了再抛出异常。所有迭代器的实现都是快速失败的设计。&lt;/p&gt;
+<feed xmlns="http://www.w3.org/2005/Atom"><title>Notes</title><link href="/" rel="alternate"></link><link href="/feeds/all.atom.xml" rel="self"></link><id>/</id><updated>2015-02-05T00:00:00-08:00</updated><entry><title>Arrow不可能性定理</title><link href="/2015/02/arrows-impossibility-theorem" rel="alternate"></link><updated>2015-02-05T00:00:00-08:00</updated><author><name>redswallow</name></author><id>tag:,2015-02-05:2015/02/arrows-impossibility-theorem</id><summary type="html">&lt;p&gt;Arrow不可能性定理&lt;/p&gt;
+&lt;p&gt;1972年诺贝尔经济学奖的获得者Kenneth Arrow在《社会选择与个人价值》中，考虑的是比选举更为细致的社会福利函数Social welfare function，给定一个集体中每个成员对候选人一组偏好顺序序列，那么一个“社会选择机制”能够在多好的程度上得到一个综合的排序，输出一个整合了各种意见的排序？&lt;/p&gt;
+&lt;p&gt;一个合理的选举制度，它必须满足一些条件：&lt;/p&gt;
+&lt;ol&gt;
+&lt;li&gt;
+&lt;p&gt;帕雷托最优
+如果在每个人的排序中A都优于B，在输出结果中A也应当优于B。&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;无关因素独立性
+假设社会福利函数返回的排序中，A在B的前。但这时某些投票的人对A、B外的第三人C的看法变卦了，不应当影响到结果中A和B的相对排序，社会福利函数的结果A还是在B的前面。&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;非独裁性
+这个函数的输出意见不能总是等于同一个人的输入意见，不存在一个人的意见总是凌驾于所有人的意见之上。反过来，独裁性就是指社会福利函数最终返回的结果，恰好和某个投票人的个人意向完全相同，那么就说明那个人独裁了这一次的选举，“被独裁”的选民很有可能对独裁这件事并无兴趣或一无所知，就如鸽笼原理，只是恰好落到了他头上而已。&lt;/p&gt;
+&lt;/li&gt;
+&lt;/ol&gt;
+&lt;p&gt;Arrow不可能性定理充分反应出个人决策和群体抉择之间的巨大差异,表明在社会事务中想要做出令人满意的集体决策几乎是不可能的。Muller—Satterthwaite不可能性定理则从不同的角度进一步说明设计一个合理的集体决策规则是多么的困难。这些不可能性定理所预示的结论是悲观的。&lt;/p&gt;</summary><category term="social choice theory"></category></entry><entry><title>fail-fast 和 fail-safe 机制</title><link href="/2014/11/fail-fast-and-fail-safe-iterators" rel="alternate"></link><updated>2014-11-19T00:00:00-08:00</updated><author><name>redswallow</name></author><id>tag:,2014-11-19:2014/11/fail-fast-and-fail-safe-iterators</id><summary type="html">&lt;p&gt;fail-fast 机制是 Java 集合 (Collection) 中的一种是一种错误检测机制，JDK 并不保证 fail-fast 机制一定会发生。如果在迭代器迭代的过程中会检查对集合的结构进行任何的修改，每次获得下一个元素时，如果发现有任何修改，会立刻抛出异常 ConcurrentModificationException，而不是等遍历完了再抛出异常。所有迭代器的实现都是快速失败的设计。&lt;/p&gt;
 &lt;p&gt;快速失败 fail-fast 和故障安全 fail-safe 之间的不同是什么？&lt;/p&gt;
 &lt;p&gt;迭代器故障安全 fail-safe 以克隆方式工作，因此它不会影响集合中的任何修改。所有 java.util 包中的集合类都是 fail-fast，而 java.util.concurrent 中的类比如 CopyOnWriteArrayList 都是 fail-safe。&lt;/p&gt;
 &lt;p&gt;&lt;code&gt;Contrary to fail-fast Iterator, fail-safe iterator doesn't throw any Exception if Collection is modified structurally
