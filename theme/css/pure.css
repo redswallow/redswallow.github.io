@@ -114,10 +114,14 @@ pre {
     max-width: 100%;
 }
 
+.brand-main {
+    text-align: center;
+}
+
 .brand-main a {
     text-transform: uppercase;
     text-decoration: none;
-    margin-left: 100px;
+    margin: auto;
     font-size: 36px;
     color: #fff;
     border-bottom: 1px solid rgba(255,255,255,0.3);
